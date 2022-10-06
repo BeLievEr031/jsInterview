@@ -22,6 +22,10 @@ class Bank {
 
 let ankul = new Bank("Ankul", 5000, 123);
 
+/*** agar amount public rahega to 
+ * @ankul.amount = "phone"
+ * @ankul ke andar ke amount me hum @String dal sakate he
+ * ***/
 ankul.addAmount = 450;
 
 console.log(ankul);
