@@ -31,12 +31,10 @@ function Bank(cName, amount) {
   };
 }
 
-
-
-
 let ankul = new Bank("Ankul", 1000);
 let anish = new Bank("Anish", 2000);
 
+console.log(ankul instanceof Bank);
 
 console.log("Before add amount: ");
 ankul.showBalance();

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>heading</h1>
+    <h1>heading</h1>
+    <h1>heading</h1>
+
+    <div>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis,
+      quisquam.
+    </div>
+
+    <img src="https://picsum.photos/200/300" alt="" />
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        alert("i am ready");
+      });
+
+      window.addEventListener("load", () => {
+        alert("i am loaded");
+      });
+
+      window.addEventListener("beforeunload", (e) => {
+        return (e.returnValue = "");
+      });
+    </script>
+  </body>
+</html>

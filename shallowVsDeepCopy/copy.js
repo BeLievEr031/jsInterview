@@ -76,12 +76,14 @@ console.log("f2--> ", fruits2);
 /* @Deep Copy*/
 
 let fruits = [
+  
   "mango",
   "papaya",
   "pear",
   "banana",
   "chickoo",
   { special: "dragonfruits" },
+
 ];
 
 let fruits2 = JSON.parse(JSON.stringify(fruits));

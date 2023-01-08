@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" />
+  </body>
+  <script>
+    document.querySelector("input").addEventListener("keydown", () => {
+      optimized();
+    });
+
+    function work() {
+      console.log(31);
+    }
+
+    let debouncing = (work, delay) => {
+      let timeid;
+      return (optimizedFunc = () => {
+        clearInterval(timeid);
+        timeid = setTimeout(() => {
+          work();
+        }, delay);
+      });
+    };
+
+    let throtlling = (work, delay) => {
+      let flag = true;
+      return () => {function test_prime(n)
+{
+//Write your code here
+}
+var stdin = process.openStdin();
+stdin.addListener("data", function(d) {
+      var x= d.toString().trim().split(" ");
+      let a=Number(x[0]);
+      console.log(test_prime(a));
+  });
+        if (flag) {
+          work();
+          flag = false;
+          setTimeout(() => {
+            flag = true;
+          }, delay);
+        }
+      };
+    };
+
+    var optimized = debouncing(work, 500);
+    // var optimized = throtlling(work, 500);
+
+    const deb = () => {
+      let timeid;
+      return () => {
+        clearInterval(timeid);
+        timeid = setTimeout(() => {
+          console.log(31);
+        }, 1000);
+      };
+    };
+  </script>
+</html>
