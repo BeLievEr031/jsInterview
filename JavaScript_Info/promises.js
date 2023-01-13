@@ -3,7 +3,7 @@ let register = () => {
     setTimeout(() => {
       console.log("user registser");
       resolve({ data: "success" });
-    }, 5000);
+    }, 1000);
   });
 };
 
@@ -21,7 +21,7 @@ let enterOtp = () => {
     setTimeout(() => {
       console.log("enter otp");
       resolve();
-    }, 8000);
+    }, 1000);
   });
 };
 
@@ -35,16 +35,29 @@ let checking = () => {
 };
 
 let done = () => {
-  return new Promise(() => {
+  return new Promise((resolve, reject) => {
     setTimeout(() => {
       console.log("complete");
-    }, 5000);
+      resolve();
+    }, 1000);
   });
 };
 
-register().then(sendmail).then(enterOtp).then(checking).then(done);
+// register().then(sendmail).then(enterOtp).then(checking).then(done);
 // sendmail();
 // checking();
 // done();
+
+async function v2() {
+  let data = await register();
+  await sendmail();
+  await enterOtp();
+  await checking();
+  await done();
+
+  console.log("----------------#########------------");
+}
+
+v2();
 
 console.log("other app working");
